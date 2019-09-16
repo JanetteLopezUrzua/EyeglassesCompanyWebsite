@@ -1,0 +1,124 @@
+.col1, .col2{
+    box-sizing: border-box; 
+}
+footer{
+    clear: both;
+}
+hr{
+    margin-left: 10%;
+    margin-right: 0%;
+    margin-top: 25px;
+    display: block; 
+    height: 2px;
+    background-color: #000; 
+}
+ul li{
+    list-style-type: none;
+    clear: both;
+}
+fieldset{
+    border: none;
+}
+input[type="submit"]{
+    width: 7em;
+    height: 2em;
+    background-color: #fff;
+    font-size: 1.2em;
+    border: 1px solid #04699d;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+    margin-right: 10px;
+    background-color: rgba(193, 154, 107, 1);
+    color: #fff;
+}
+input[type="submit"]:focus{
+    background-color: rgba(255, 165, 0, 0.5);
+}
+#button{
+    text-align: center;
+}
+input.textinput{
+    width: 96%;
+    height: 2em;
+    border: 1.5px solid #388E8E;
+    border-radius: 5px;
+    font-size: .875em;
+    margin: 0.5em auto;
+}
+select{
+    width: 96%;
+    height: 2em;
+    border: 1.5px solid #388E8E;
+    border-radius: 5px;
+    font-size: .875em;
+    margin: 0.5em auto;
+}
+dt{
+    margin-left: 50px;
+    font-weight: 600;
+}
+dd{
+    margin-left: 100px;
+    font-style: italic;
+}
+h1{
+    margin: 0 10%;
+    color: #388E8E;
+    text-align: center;
+}
+h3{
+    color: rgba(193, 154, 107, 1);
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+input{
+    text-indent: 5px;
+}
+p#answer1, p#answer2, p#answer3, p#price1, p#price2, p#price3, p#total{
+    display: inline-block;
+    margin: 0;
+    padding: 0 30px 0 0;
+    font-weight: 600;
+}
+input[type="button"]{
+    display: block;
+    margin-top: 20px;
+}
+p#total {
+    display: block;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    color: #388E8E;
+}
+form{
+    margin: 0 5%
+}
+
+@media screen and (min-width:710px){
+    .col1{
+        float:left;
+        width: 30%;
+        margin-left: 7%;
+    }
+    .col2{
+        float: left;
+        width: 63%
+    }
+    hr{
+        margin-right: 50%; 
+    }
+    h1{
+        margin-left: 100px;
+        text-align: left;
+    }
+    input.textinput{
+        width: 50em;
+        margin: 0.5em 0;
+    }
+    select{
+        width: 20em;
+        margin: 0.5em 0;
+    }
+}
+

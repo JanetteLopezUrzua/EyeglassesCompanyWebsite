@@ -1,0 +1,11 @@
+#main_image_container {
+    display: block;
+    max-width: 60%;
+    height: 400px;
+    margin: auto;
+    box-sizing: border-box;
+    padding-top: 10px;
+    background-image: url(../img/kids-header-pic.jpg);
+    background-repeat: no-repeat;
+    background-position: center
+}

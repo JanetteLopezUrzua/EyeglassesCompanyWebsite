@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>LoUr | Buy Glasses</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Chivo%7CLora%7CMontserrat:300%7Cdisplay=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/nav.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <header id="masthead">
+                <a href="index.html"><img src="img/logo.svg" id="logo" alt="LoUr Logo"></a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">ABOUT US</a></li>
+                        <li><a href="women.html">WOMEN</a></li>
+                        <li><a href="men.html">MEN</a></li>
+                        <li><a href="kids.html">KIDS</a></li>
+                        <li id="order_now"><a href="order.html">ORDER NOW</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="slideshow_container">
+                <div class="slides fade">
+                  <img src="img/slide-pic1.jpg" style="width:100%" alt="Woman glasses">
+                </div>
+                <div class="slides fade">
+                  <img src="img/slide-pic2.jpg" style="width:100%" alt="Man glasses">
+                </div>
+                <div class="slides fade">
+                  <img src="img/slide-pic3.jpg" style="width:100%" alt="Kid glasses">
+                </div>
+            <a class="prev" onclick="nextSlide(-1)">&#10094;</a>
+            <a class="next" onclick="nextSlide(1)">&#10095;</a>
+            </div>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+            <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+
+                // Next/previous controls
+                function nextSlide(n) {
+                  showSlides(slideIndex += n);
+                }
+
+                // Thumbnail image controls
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                  var i;
+                  var slides = document.getElementsByClassName("slides");
+                  var dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1} 
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                      slides[i].style.display = "none"; 
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                      dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block"; 
+                  dots[slideIndex-1].className += " active";
+                }
+            </script>
+            <div id="white_container">
+                <h1>About Us</h1>
+                <p>LoUr is a company dedicated to sell eyeglasses from different brands around the world. We have glasses for women, men, and even kids! Check out our inventory in this website. You can order yours online from the comfort of your home, and we will ship them to you. We have a 100% refund guarantee. Your trust is important to us. </p>
+            </div>
+            <footer>Copyrigth &copy; 2019 | LoUr.com</footer>
+        </div>
+    </body>
+</html>

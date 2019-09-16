@@ -1,0 +1,105 @@
+body{
+	background-color: #fff;
+	font-family: Lora, Chivo, Verdana, sans-serif;	
+    background-image: url(../img/background.jpg);
+	max-width: 1920px;
+	min-width: 300px;
+    margin: 0 auto;
+}
+#wrapper{
+	background-color: #fff;
+    background-image: url(../img/background.jpg);
+}
+#logo{
+        float: left;
+        height: 40px;
+        margin: 3px;
+        padding: 5px;
+        background-color: rgba(56, 142, 142, 0.5);
+        -moz-border-radius: 8px;
+        -webkit-border-radius: 8px;
+        border-radius: 8px;
+}
+nav{	
+    clear: both;
+    font-family: Montserrat, monospace, sans-serif; 
+    padding:0;
+    overflow: hidden;
+}
+nav ul{
+    margin: 0;
+    padding: 0;
+}
+nav ul li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+#order_now a{
+     color: #388E8E;
+}
+nav ul li a{
+    display: block;
+    padding: .5rem;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.1rem; 
+    color: #000;
+    font-weight: 600;
+}
+nav ul li a:hover{
+    background-color: rgba(193, 154, 107, 1);
+    color: rgba(255, 255, 255,1.0);
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+nav ul li a:focus{
+    background-color: rgba(255, 165, 0, 0.5);
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+footer{
+        background-color: rgba(56, 142, 142, 0.5);
+        padding-top: 15px;
+        padding-bottom: 15px;
+        text-align: right;
+        padding-right: 10px;
+        margin-top: 20px;
+}
+
+@media screen and (min-width:710px){
+    header{
+        position: relative;
+        height: 52px;
+    }
+    nav{	
+        position: absolute;
+        padding: 1em 0;
+        width: 50%;
+        bottom:0;
+        right: 3em;
+    }
+    nav ul{
+        display: flex;
+        height: 15px;
+        align-items: center;
+    }
+    nav ul li a{
+        padding: 0.5rem;
+        font-size: 1.1rem; 
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

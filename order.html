@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>LoUr | Buy Glasses</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Chivo%7CLora%7CMontserrat:300%7Cdisplay=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/nav.css">
+        <link rel="stylesheet" type="text/css" href="css/order.css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <header id="masthead">
+                <a href="index.html"><img src="img/logo.svg" id="logo" alt="LoUr Logo"></a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">ABOUT US</a></li>
+                        <li><a href="women.html">WOMEN</a></li>
+                        <li><a href="men.html">MEN</a></li>
+                        <li><a href="kids.html">KIDS</a></li>
+                        <li id="order_now"><a href="order.html">ORDER NOW</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <h1>Interested? Order Now</h1>
+            <form method="post" action="mailto:janettelopezurzua@gmail.com" enctype="text/plain" onsubmit="window.alert('Your Order has been Placed')">
+                <section id="section1">
+                    <div class="col1">
+                        <h2>Personal Information</h2>
+                        <p>Enter your information in the fields.</p>
+                    </div>
+                    <div class="col2">
+                        <fieldset id="personal_info">
+                            <ul>
+                                <li>
+                                    <input type="text" name="name" placeholder="Name" class="textinput" maxlength="50" required>
+                                </li>
+                                <li>
+                                    <input type="email" name="email" placeholder="Email Address" class="textinput" maxlength="40" required>
+                                </li>
+                                <li>
+                                <input type="tel" name="phone" placeholder="Phone Number" class="textinput" maxlength="15" required>
+                                </li>
+                            </ul>
+                        </fieldset>
+                    </div>
+                </section>
+                <hr>
+                <section id="section2">
+                    <div class="col1">
+                        <h2>Purchase Information</h2>
+                        <p>Select the options you want for your eyeglasses.</p>
+                    </div>
+                    <div class="col2">
+                        <fieldset id="purchase_info">
+                            <ul>
+                                <li>
+                                    <select name="glasses" id="glasses" required>
+                                        <option value="" disabled selected>Select glasses</option>
+                                        <option value="55.99">Adensco</option>
+                                        <option value="60.00">Calvin Klein</option>
+                                        <option value="110.50">Kate Spade</option>
+                                        <option value="127.00">LongChamp Paris</option>
+                                        <option value="99.99">LACOSTE</option>
+                                        <option value="85.50">Donald Trump Collection</option>
+                                        <option value="105.00">Carrera</option>
+                                        <option value="320.00">TC CHARTON</option>
+                                    </select>
+                                </li>
+                            </ul>
+                            <ul>
+                                 <li>
+                                    <select name="color" required>
+                                        <option value="" disabled selected>Select frame color</option>
+                                        <option>White</option>
+                                        <option>Black</option>
+                                        <option>Brown</option>
+                                        <option>Gold</option>
+                                        <option>Red</option>
+                                    </select>
+                                </li>
+                            </ul>
+                            <h3>Select a Prescription Type</h3>
+                            <dl>
+                                <dt>
+                                    <label onclick="get_option2('Single_Vision', 'answer1')" id="Single_Vision">
+                                        <input class="radioBtn" type="radio" onclick="disable(); get_total('glasses', 'SV', 'price1');" name="prescription_type" value="0" id="SV">Single Vision
+                                    </label>
+                                </dt>
+                                <dd>Corrects one field of vision(near, intermediate, or distance)</dd>
+                                <dt>
+                                    <label onclick="get_option2('Progressives', 'answer1')" id="Progressives">
+                                        <input class="radioBtn" type="radio" onclick="disable(); get_total('glasses', 'Pgrs', 'price1');" name="prescription_type" value="200.00" id="Pgrs">Progressives +$200
+                                    </label>
+                                </dt>
+                                <dd>Correct near, intermediate, and distance fields of vision in one lens so you don't have to switch between multiple pairs.</dd>
+                                <dt>
+                                    <label onclick="get_option2('Readers', 'answer1')" id="Readers">
+                                        <input class="radioBtn" type="radio" onclick="enable(); get_total('glasses', 'Rdrs', 'price1');" name="prescription_type" value="0" id="Rdrs">Readers
+                                    </label>
+                                </dt>
+                                <dd>Offer simple magnification for reading (no prescription neccessary).</dd>
+                            </dl>
+                                <ul>
+                                 <li>
+                                    <select name="magnification" id="magnification" disabled>
+                                        <option value="" disabled selected>Select a magnification strength</option>
+                                        <option>+0.25</option>
+                                        <option>+0.50</option>
+                                        <option>+0.75</option>
+                                        <option>+1.00</option>
+                                        <option>+1.25</option>
+                                        <option>+1.50</option>
+                                        <option>+1.75</option>
+                                        <option>+2.00</option>
+                                        <option>+2.25</option>
+                                        <option>+2.50</option>
+                                        <option>+2.75</option>
+                                    </select>
+                                </li>
+                                </ul>
+                            <dl>
+                                <dt>
+                                    <label onclick="get_option2('Non-Prescription', 'answer1')" id="Non-Prescription">
+                                        <input class="radioBtn" type="radio" onclick="disable(); get_total('glasses', 'NP', 'price1');" name="prescription_type" value="0" id="NP">Non-Prescription
+                                    </label>
+                                </dt>
+                                <dd>Offer style and protection with no vision correction.</dd>
+                            </dl>
+                            <h3>Select a Lens Type</h3>
+                            <dl>
+                                <dt>
+                                    <label onclick="get_option2('Classic', 'answer2')" id="Classic">
+                                        <input class="radioBtn" type="radio" name="lens_type" onclick="get_total2('Cl', 'price2')" value="0" id="Cl">Classic
+                                    </label>
+                                </dt>
+                                <dd>Scratch-resistant, anti-reflective lenses that block 100% of UV rays.</dd>
+                                <dt>
+                                    <label onclick="get_option2('Blue-light-filtering', 'answer2')" id="Blue-light-filtering">
+                                        <input class="radioBtn" type="radio" name="lens_type" onclick="get_total2('Blf', 'price2')" value="50.00" id="Blf">Blue-light-filtering +$50
+                                    </label>
+                                </dt>
+                                <dd>Scratch-resistant, anti-reflective lenses that block 100% of UV rays; they also filter more blue light from digital screens and the sun than our classic or light-responsive lenses.</dd>
+                                <dt>
+                                    <label onclick="get_option2('Light-responsive', 'answer2')" id="Light-responsive">
+                                        <input class="radioBtn" type="radio" name="lens_type" onclick="get_total2('Lr', 'price2')" value="100.00" id="Lr">Light-responsive +$100
+                                    </label>
+                                </dt>
+                                <dd>Scratch-resistant, anti-reflective lenses that block 100% of UV rays, transition from clear to a darker tint when you're outside, and filter more blue light than our classic lenses.</dd>
+                            </dl>
+                            <h3>Select a Lens Material</h3>
+                            <dl>
+                                <dt>
+                                    <label onclick="get_option2('Polycarbonate', 'answer3')" id="Polycarbonate">
+                                        <input class="radioBtn" type="radio" onclick="get_total2('Poly', 'price3')" name="lens_material" value="0" id="Poly">Polycarbonate
+                                    </label>
+                                </dt>
+                                <dd>High-quality and impact-resistant.</dd>
+                                <dt>
+                                    <label onclick="get_option2('1.67_high-index', 'answer3')" id="1.67_high-index">
+                                        <input class="radioBtn" type="radio" onclick="get_total2('hi', 'price3')" name="lens_material" value="30.00" id="hi">1.67 high-index +$30
+                                    </label>
+                                </dt>
+                                <dd>Thinner lenses recommended for strong prescriptions (if total power is +/-4.0 or higher).</dd>
+                            </dl>
+                        </fieldset>
+                    </div>
+                </section>
+                <hr>
+                <section id="section3">
+                    <div class="col1">
+                        <h2>Review Information</h2>
+                        <p>Review the information entered and the subtotal for the order.</p>
+                    </div>
+                    <div class="col2">
+                        <h3>Prescription</h3>
+                        <p id="answer1"></p>
+                        <p id="price1"></p>
+                        <h3>Lens Type</h3>
+                        <p id="answer2"></p>
+                        <p id="price2"></p>
+                        <h3>Lens Material</h3>
+                        <p id="answer3"></p>
+                        <p id="price3"></p>
+                         <input type="button" value="Calculate Subtotal" onclick="get_total_sum()">
+                        <p id="total"></p>
+                    </div>
+                </section>
+                <hr>
+                <section id="section4">
+                    <div class="col1">
+                        <h2>Billing Information</h2>
+                        <p>Enter your card information.</p>
+                    </div>
+                    <div class="col2">
+                        <fieldset id="billing_info">
+                            <ul>
+                                <li>
+                                    <input type="text" name="name" placeholder="Name on Card" class="textinput" maxlength="50" required>
+                                </li>
+                                <li>
+                                    <input type="email" name="email" placeholder="Billing Email Address" class="textinput" maxlength="40" required>
+                                </li>
+                                <li>
+                                    <input type="tel" name="phone" placeholder="Billing Phone Number" class="textinput" maxlength="15" required>
+                                </li>
+                                <li>
+                                    <input type="tel" name="card_number" placeholder="Enter Card Number" class="textinput" maxlength="25" required>
+                                </li>
+                                <li>
+                                    <label id="exp_date">Enter Exp. Date : </label>
+                                    <input type="date" name="exp_date" class="textinput" required>
+                                </li>
+                                <li>
+                                    <input type="number" name="cvc" placeholder="CVC" class="textinput"  required>
+                                </li>
+                                <li>
+                                    <input type="text" name="address" placeholder="Billing Address" class="textinput" maxlength="20" required>
+                                </li>
+                                <li>
+                                    <input type="text" name="city" placeholder="city" class="textinput" maxlength="20" required>
+                                </li>
+                                <li>
+                                    <input type="number" name="postal_code" placeholder="Postal Code" class="textinput" required>
+                                </li>
+                                <li>
+                                    <input type="text" name="state" placeholder="State/Province" class="textinput" maxlength="20" required>
+                                </li>
+                                <li>
+                                    <input type="text" name="country" placeholder="Country" class="textinput" maxlength="20" required>
+                                </li>
+                            </ul>
+                        </fieldset>
+                    </div>
+                </section>
+                <fieldset id="button">
+                    <input type="submit" value="Place Order">
+                </fieldset>
+            </form>
+            <script>
+                function disable() {
+                    document.getElementById("magnification").disabled=true;
+                }
+                
+                function enable() { 
+                    document.getElementById("magnification").disabled=false;
+                }
+                
+                function get_total(id1, id2, id3){
+                    var obj1 = document.getElementById(id1);
+                    var obj2 = document.getElementById(id2);
+                    document.getElementById(id3).innerHTML = "$" + (parseFloat(obj1.options[obj1.selectedIndex].value) + parseFloat(obj2.value)).toFixed(2); 
+                    document.getElementById(id3).value = (parseFloat(obj1.options[obj1.selectedIndex].value) + parseFloat(obj2.value)).toFixed(2); 
+                }
+                
+                function get_total2(id1, id2){
+                    var obj = document.getElementById(id1);
+                    document.getElementById(id2).innerHTML = "$" + parseFloat(obj.value).toFixed(2); 
+                    document.getElementById(id2).value = parseFloat(obj.value).toFixed(2); 
+                }
+                
+                function get_total_sum(){
+                     document.getElementById("total").innerHTML = "$" + (parseFloat(document.getElementById("price1").value) + parseFloat(document.getElementById("price2").value) + parseFloat(document.getElementById("price3").value)).toFixed(2) + " USD."; 
+                }
+                
+                function get_option2(id1, id2){
+                    var obj = document.getElementById(id1);
+                    document.getElementById(id2).innerHTML = obj.textContent;  
+                }
+            </script>
+            <footer>Copyrigth &copy; 2019 | LoUr.com</footer>
+        </div>
+    </body>
+</html>
